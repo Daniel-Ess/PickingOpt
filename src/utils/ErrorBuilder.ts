@@ -1,5 +1,5 @@
 import { map } from 'lodash'
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 // types
 import { MESSAGE_TYPE } from '../types/enums'

@@ -1,7 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
-import Joi from '@hapi/joi'
-
-import ErrorBuilder from '../../../utils/ErrorBuilder'
+import Joi from 'joi'
 
 export const schema = Joi.object({
 	body: Joi.object(),

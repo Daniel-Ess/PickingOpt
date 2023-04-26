@@ -1,8 +1,3 @@
-export interface IConfig {
-	server: IServerConfig,
-	extService: IExtServiceConfig
-}
-
 export interface IServerConfig {
 	port: number
 	domain: string
@@ -18,4 +13,9 @@ export interface IErrorBuilderItem {
 	message: string,
 	type: string,
 	path?: string
+}
+
+export interface IConfig {
+	server: IServerConfig,
+	extService: IExtServiceConfig
 }

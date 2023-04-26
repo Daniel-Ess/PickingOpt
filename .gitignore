@@ -5,3 +5,6 @@ dist/
 .env
 .idea
 package-lock.json
+/apidoc
+yarn.lock
+yarn-error.log

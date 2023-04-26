@@ -1,11 +1,10 @@
-
 import * as winston from 'winston'
 import * as path from 'path'
 import WinstonDailyRotateFile from 'winston-daily-rotate-file'
 
 import config from '../../config/default'
 
-const logDirectory = config.server.logDirectory
+const { logDirectory } = config.server
 
 const errorFileName = path.join(logDirectory, 'error-%DATE%.log')
 const infoFileName = path.join(logDirectory, 'info-%DATE%.log')
