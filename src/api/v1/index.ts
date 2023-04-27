@@ -1,11 +1,11 @@
 import { Router } from 'express'
 
-import TestRouter from './test'
+import PickingOrderRouter from './pickingOrder'
 
 const router = Router()
 
 export default () => {
-	router.use('/test', TestRouter())
+	router.use('/picking-order', PickingOrderRouter())
 
 	return router
 }

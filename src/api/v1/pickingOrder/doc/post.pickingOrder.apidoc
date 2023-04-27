@@ -1,0 +1,41 @@
+/**
+*   @api {POST} v1/picking-order Post optimize picking order
+*   @apiVersion 1.0.0
+*   @apiName PostPickingOrder
+*   @apiGroup PickingOrder
+*
+*   @apiDescription Endpoint for generating optimized picking order
+*
+*   @apiParam (Body) {String[]} products Array of product IDs to be picked
+*
+*   @apiParamExample {json} Request-Body-Example:   
+*   {
+*       "products": ["product-1", "product-5", ...],
+*   }
+*
+*   @apiSuccess (Response) {Object[]} pickingOrder Optimized picking order array of objects
+*   @apiSuccess (Response) {String} pickingOrder.productId Product ID string
+*   @apiSuccess (Response) {String} pickingOrder.positionId Position ID string
+*   @apiSuccess (Response) {Number} pickingOrder.order Order of picking sequence
+*   @apiSuccess (Response) {Number} distance Overall distance of picking sequence
+*
+*   @apiSuccessExample Success-Response-Example:
+*   HTTP/1.1 200 OK
+*   {
+*       "pickingOrder": {[
+*           {
+*               "productId": "product-2",
+*               "positionId": "position-456"
+*           }, {
+*               "productId": "product-55",
+*               "positionId": "position-254"
+*           }, {
+*               ...
+*           }
+*       ]},
+*       "distance": 120
+*   }
+*
+*   @apiUse ErrorResponse
+*
+*/

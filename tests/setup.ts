@@ -1,3 +1,5 @@
+jest.mock('../src/services/warehouse')
+
 beforeAll(async () => {
 })
 

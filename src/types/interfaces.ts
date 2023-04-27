@@ -4,18 +4,36 @@ export interface IServerConfig {
 	logDirectory: string
 }
 
-export interface IExtServiceConfig {
+export interface IWarehouseServiceConfig {
 	apiUrl: string
 	apiKey: string
 }
 
 export interface IErrorBuilderItem {
-	message: string,
-	type: string,
+	message: string
+	type: string
 	path?: string
 }
 
 export interface IConfig {
-	server: IServerConfig,
-	extService: IExtServiceConfig
+	server: IServerConfig
+	warehouseService: IWarehouseServiceConfig
+}
+
+export interface IProductPosition {
+	productId: string
+	positionId: string
+	x: number
+	y: number
+	z: number
+	quantity: number
+}
+
+export interface IProduct {
+	productId: string
+}
+
+export interface IPickingOrder {
+	productId: string
+	positionId: string
 }

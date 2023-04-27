@@ -31,7 +31,7 @@ export default (err: ErrorBuilder, req: Request, res: Response, _next: NextFunct
 		}
 	} else {
 		messages = [{
-			message: req.t('error:Ups, niečo sa pokazilo!'),
+			message: 'Something went wrong!',
 			type: MESSAGE_TYPE.ERROR
 		}]
 	}
